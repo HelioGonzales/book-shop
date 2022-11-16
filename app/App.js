@@ -1,13 +1,12 @@
-import book_api from "./helpers/book_api.js";
-import { fetchCB } from "./helpers/fetch.js";
+import { Cards } from "./components/cards.js";
+import { Header } from "./components/header.js";
+import { Router } from "./components/router.js";
 
 export function App() {
-  document.getElementById("root").innerHTML = "<h1>Welcome to book shop</h1>";
-  // console.log(book_api);
-  fetchCB({
-    url: book_api.BOOK_API,
-    cbSuccess: (books) => {
-      console.log(books);
-    },
-  });
+  const $root = document.getElementById("root");
+
+  $root.appendChild(Header());
+  $root.appendChild(Cards());
+
+  Router();
 }
