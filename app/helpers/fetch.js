@@ -11,7 +11,7 @@ export function fetchCB(props) {
     })
     .catch((err) => {
       let message = "Error";
-      document.getElementById("cards").innerHTML = `
+      document.getElementById("main").innerHTML = `
       <div class="error">
       <p>Error ${err}: ${message}</p>
       </div>

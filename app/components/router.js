@@ -1,5 +1,6 @@
 import book_api from "../helpers/book_api.js";
 import { fetchCB } from "../helpers/fetch.js";
+import { Bag } from "./bag.js";
 import { BookCard } from "./bookCard.js";
 
 export function Router() {
@@ -8,7 +9,7 @@ export function Router() {
 
   let { hash } = location;
 
-  d.getElementById("cards").innerHTML = null;
+  d.getElementById("main").innerHTML = null;
 
   console.log(hash);
 
@@ -18,15 +19,15 @@ export function Router() {
       cbSuccess: (books) => {
         console.log(books);
         let html = "";
-        books.forEach((post) => {
-          html += BookCard(post);
-          d.getElementById("cards").innerHTML = html;
+        books.map((book) => {
+          html += BookCard(book);
+          d.getElementById("main").innerHTML = html;
         });
       },
     });
   } else if (hash === "#/bag") {
-    d.getElementById("cards").innerHTML = "<h2>Bag</h2>";
+    d.getElementById("main").innerHTML = Bag();
   } else if (hash === "#/form") {
-    d.getElementById("cards").innerHTML = "<h2>Form</h2>";
+    d.getElementById("main").innerHTML = "<h2>Form</h2>";
   }
 }
