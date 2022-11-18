@@ -6,6 +6,7 @@ import { BookCard } from "./bookCard.js";
 export function Router() {
   const d = document;
   const w = window;
+  const $form = d.querySelector(".order-form");
 
   let { hash } = location;
 
@@ -25,9 +26,24 @@ export function Router() {
         });
       },
     });
+    $form.classList.add("show-form");
   } else if (hash === "#/bag") {
-    d.getElementById("main").innerHTML = Bag();
-  } else if (hash === "#/form") {
-    d.getElementById("main").innerHTML = "<h2>Form</h2>";
+    const $sectionBag = d.createElement("div");
+    $sectionBag.classList.add("bag-container");
+
+    const $confirmBtn = d.createElement("a");
+    $confirmBtn.classList.add("confirm-btn");
+    $confirmBtn.href = "#/form-order";
+    $confirmBtn.textContent = "CONFIRM ORDER";
+
+    d.getElementById("main").appendChild($sectionBag);
+    $sectionBag.innerHTML = Bag();
+    $sectionBag.appendChild($confirmBtn);
+
+    $form.classList.add("show-form");
+  } else if (hash === "#/form-order") {
+    // d.getElementById("main").innerHTML = "<h2>Form</h2>";
+    // const $form = d.querySelector(".order-form");
+    $form.classList.remove("show-form");
   }
 }

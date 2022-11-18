@@ -80,6 +80,55 @@ img {
   text-decoration: none;
 }
 
+.bag-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.bag {
+  background-color: var(--bg-color-primary);
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0.5rem 0.5rem grey;
+  padding: 1rem;
+}
+
+.confirm-btn {
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 0.5rem;
+  background-color: var(--bg-color-primary);
+  text-decoration: none;
+}
+
+.order-form {
+  text-align: center;
+
+  margin-top: 20px;
+  /* background-color: var(--bg-color-primary); */
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color-primary);
+  gap: 10px;
+}
+
+.show-form {
+  display: none;
+}
+
 .error {
   padding: 1rem;
   font-size: 150%;
