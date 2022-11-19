@@ -97,6 +97,11 @@ img {
   padding: 1rem;
 }
 
+.bag a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .confirm-btn {
   width: 40%;
   text-align: center;
