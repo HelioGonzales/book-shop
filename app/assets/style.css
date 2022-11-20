@@ -2,6 +2,7 @@
   --bg-color-primary: #f7df1e;
   --bg-color-secondary: #fff;
   --bg-color-error: #dc3545;
+  --form-ok-color: #4caf50;
 }
 
 html {
@@ -130,15 +131,6 @@ img {
   /* background-color: var(--bg-color-primary); */
 }
 
-.order-form form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--bg-color-primary);
-  gap: 10px;
-}
-
 .show-form {
   display: none;
 }
@@ -150,4 +142,54 @@ img {
   text-align: center;
   color: #fff;
   background-color: var(--bg-color-error);
+}
+
+/* FORM */
+
+.form-order {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.form-order > * {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+}
+
+.form-order legend {
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-order button[type="submit"] {
+  width: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-order [required]:valid {
+  border: thin solid var(--form-ok-color);
+}
+
+.form-order [required]:invalid {
+  border: thin solid var(--bg-color-error);
+}
+
+.form-error {
+  margin-top: -0.5rem;
+  font-size: 80%;
+  background-color: var(--bg-color-error);
+  color: var(--bg-color-secondary);
+  /* transition: all 800ms ease; */
+}
+
+.form-error.is-active {
+  display: block;
+}
+
+.show-error-form {
+  display: none;
 }

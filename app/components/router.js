@@ -2,6 +2,7 @@ import book_api from "../helpers/book_api.js";
 import { fetchCB } from "../helpers/fetch.js";
 import { Bag } from "./bag.js";
 import { BookCard } from "./bookCard.js";
+import { FormOrder } from "./form-order.js";
 import { Total } from "./total.js";
 
 export function Router() {
@@ -44,8 +45,7 @@ export function Router() {
 
     $form.classList.add("show-form");
   } else if (hash === "#/form-order") {
-    // d.getElementById("main").innerHTML = "<h2>Form</h2>";
-    // const $form = d.querySelector(".order-form");
     $form.classList.remove("show-form");
+    FormOrder();
   }
 }
