@@ -2,7 +2,20 @@ export function Bag() {
   let bookList = JSON.parse(localStorage.getItem("book-list"));
 
   return bookList.map((book) => {
-    console.log(book);
+    // Remove item
+    document.addEventListener("click", (e) => {
+      // e.preventDefault();
+      if (e.target.dataset.id === book.author) {
+        const newBookList = bookList.filter(
+          (item) => item.author !== book.author
+        );
+
+        bookList = newBookList;
+        location.reload();
+      }
+
+      localStorage.setItem("book-list", JSON.stringify(bookList));
+    });
 
     return `
         <div class="bag">

@@ -2,11 +2,12 @@ import book_api from "../helpers/book_api.js";
 import { fetchCB } from "../helpers/fetch.js";
 import { Bag } from "./bag.js";
 import { BookCard } from "./bookCard.js";
+import { Total } from "./total.js";
 
 export function Router() {
   const d = document;
   const w = window;
-  const $form = d.querySelector(".order-form");
+  const $form = d.querySelector(".form-order");
 
   let { hash } = location;
 
@@ -38,6 +39,7 @@ export function Router() {
 
     d.getElementById("main").appendChild($sectionBag);
     $sectionBag.innerHTML = Bag();
+    $sectionBag.appendChild(Total());
     $sectionBag.appendChild($confirmBtn);
 
     $form.classList.add("show-form");

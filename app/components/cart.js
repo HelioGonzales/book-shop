@@ -1,5 +1,7 @@
 export function Cart() {
-  let bookList = JSON.parse(localStorage.getItem("book-list")).length;
+  let bookList = JSON.parse(localStorage.getItem("book-list"))
+    ? JSON.parse(localStorage.getItem("book-list")).length
+    : 0;
   const $cart = document.createElement("a");
   $cart.href = "#/bag";
   $cart.classList.add("cart");
