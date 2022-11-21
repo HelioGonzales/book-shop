@@ -4,7 +4,6 @@ export function Bag() {
   return bookList.map((book) => {
     // Remove item
     document.addEventListener("click", (e) => {
-      // e.preventDefault();
       if (e.target.dataset.id === book.author) {
         const newBookList = bookList.filter(
           (item) => item.author !== book.author
@@ -28,13 +27,4 @@ export function Bag() {
         </div>
     `;
   });
-  //   return `
-  //  <section class="bag-page">
-  //   <div>
-  //     <h2>Title:</h2>
-  //     <p>Author:</p>
-  //     <span>Pricec:</span>
-  //   </div>
-  //  </section>
-  //  `;
 }

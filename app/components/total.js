@@ -1,7 +1,6 @@
 export function Total() {
   const $total = document.createElement("div");
   $total.classList.add("total");
-  // $total.textContent = "TOTAL";
 
   const bookList = JSON.parse(localStorage.getItem("book-list"));
   let totalSum = [];

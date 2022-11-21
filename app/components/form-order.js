@@ -30,7 +30,6 @@ export function FormOrder() {
     }
   });
 
-  // Refact
   const form = document.getElementById("form");
   form.addEventListener("change", (e) => {
     e.preventDefault();

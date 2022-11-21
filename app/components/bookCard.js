@@ -10,7 +10,6 @@ export function BookCard(props) {
       e.preventDefault();
       const bookList = JSON.parse(localStorage.getItem("book-list")) || [];
 
-      let updateBook = Boolean;
       const bookExist = bookList.find(
         (auth) => auth.author.toString() === author
       );
@@ -24,7 +23,6 @@ export function BookCard(props) {
             } else {
               auth.quantity = quantity;
             }
-            //  Needs refator
             location.reload();
             return bookList;
           }
@@ -33,14 +31,12 @@ export function BookCard(props) {
         bookList.push({ title, author, price, quantity });
       }
 
-      // bookList.push({ title, author, price, quantity });
       localStorage.setItem("book-list", JSON.stringify(bookList));
     }
   });
 
   document.addEventListener("click", (e) => {
     if (e.target.dataset.des === author) {
-      // e.preventDefault();
       console.log(description);
       document.getElementById("main").appendChild(Popup(description));
       document.querySelector(".popup").classList.add("active");

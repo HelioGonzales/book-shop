@@ -29,13 +29,5 @@ export function OrderConfirmation() {
   </ul>
   `;
 
-  // let name = url.searchParams.get("name");
-  // let surname = url.searchParams.get("surname");
-  // let date = url.searchParams.get("date");
-  // let street = url.searchParams.get("street");
-  // let house = url.searchParams.get("house");
-  // let flat_number = url.searchParams.get("flat_number");
-  // let radio_input = url.searchParams.get("radio-input");
-
   return $orderConfirmation;
 }
