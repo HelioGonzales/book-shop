@@ -6,7 +6,6 @@ export function fetchCB(props) {
       return response.json();
     })
     .then((data) => {
-      // console.log(data);
       cbSuccess(data);
     })
     .catch((err) => {
@@ -16,7 +15,6 @@ export function fetchCB(props) {
       <p>Error ${err}: ${message}</p>
       </div>
       `;
-
       console.log(err);
     });
 }

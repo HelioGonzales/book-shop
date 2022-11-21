@@ -10,18 +10,15 @@ export function Router() {
   const d = document;
   const w = window;
   const $form = d.querySelector(".form-order");
-  
+
   let { hash } = location;
 
   d.getElementById("main").innerHTML = null;
-
-  console.log(hash);
 
   if (!hash || hash === "#/") {
     fetchCB({
       url: book_api.BOOK_API,
       cbSuccess: (books) => {
-        console.log(books);
         let html = "";
         books.map((book) => {
           html += BookCard(book);

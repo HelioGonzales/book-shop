@@ -38,7 +38,6 @@ export function BookCard(props) {
 
   document.addEventListener("click", (e) => {
     if (e.target.dataset.des === author) {
-      console.log(description);
       document.getElementById("main").appendChild(Popup(description));
       document.querySelector(".popup").classList.add("active");
       document.querySelector("#overlay").classList.add("active");
