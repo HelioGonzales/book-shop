@@ -2,7 +2,7 @@ import { Cart } from "./cart.js";
 import { Popup } from "./popup.js";
 
 export function BookCard(props) {
-  let { title, author, price, description } = props;
+  let { title, author, price, imageLink, description } = props;
   let quantity = 1;
 
   document.addEventListener("click", (e) => {
@@ -46,7 +46,7 @@ export function BookCard(props) {
 
   return `
   <article class="card">
-    <img src="" alt="${title}">
+    <img src="${imageLink}" alt="${title}">
     <h2>Book title: ${title}</h2>
     <p>Author: ${author}</p>
     <span>Price: ${price}</span>
