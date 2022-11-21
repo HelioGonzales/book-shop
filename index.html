@@ -20,21 +20,15 @@
       pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü]+$" minlength="4" name="name" required>
     <input type="text" placeholder="Surname" title="not less than 5 symbols, strings only, without spaces"
       pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü]+$" minlength="5" name="surname" required>
-
-    <!-- Missing validation -->
     <input type="text" placeholder="Delivery Date" name="date" required>
-    <!-- Missing validation -->
-
-    <input type="text" placeholder="Street" name="street"
-      title="the length not less than 5 symbols, the numbers are allowed" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü0-9\s]+$"
-      minlength="5" required>
+    <input type="text" placeholder="Street" name="street">
+    title="the length not less than 5 symbols, the numbers are allowed" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü0-9\s]+$"
+    minlength="5" required>
     <input type="text" placeholder="House" name="house" title="numbers only, positive numbers only" pattern="^[0-9]+$"
       required>
     <input type="text" placeholder="Flat Number" name="flat_number"
       title="numbers only, positive numbers only, the dash symbol is allowed. Means, the flat number shouldn't start with minus/dash symbol. For example: -37 is invalid, but 1-37 is valid"
       pattern="^[1-9]\d*(?: ?(?:[a-z]|[/-] ?\d+))?$" required>
-
-    <!-- Missing validation -->
     <div>
       <div>
         <label for="cash">Cash</label>
@@ -45,11 +39,7 @@
         <input type="radio" id="card" value="card" name="radio-input">
       </div>
     </div>
-    <!-- Missing validation -->
-
-
     <input id="submitBtn" class="btn-complete" type="submit" value="COMPLETE" disabled>
-    <!-- <button id="submitBtn" class="btn-complete" type="submit" disabled>Complete</button> -->
   </form>
   <script src="app/index.js" type="module"></script>
 </body>
