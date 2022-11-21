@@ -10,7 +10,7 @@ export function Router() {
   const d = document;
   const w = window;
   const $form = d.querySelector(".form-order");
-
+  
   let { hash } = location;
 
   d.getElementById("main").innerHTML = null;
