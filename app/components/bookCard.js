@@ -23,7 +23,7 @@ export function BookCard(props) {
             } else {
               auth.quantity = quantity;
             }
-            location.reload();
+            // location.reload();
             return bookList;
           }
         });
@@ -31,6 +31,7 @@ export function BookCard(props) {
         bookList.push({ title, author, price, quantity });
       }
 
+      location.reload();
       localStorage.setItem("book-list", JSON.stringify(bookList));
     }
   });

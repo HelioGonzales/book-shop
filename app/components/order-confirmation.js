@@ -14,7 +14,7 @@ export function OrderConfirmation() {
     street: url.searchParams.get("street"),
     house: url.searchParams.get("house"),
     flat_number: url.searchParams.get("flat_number"),
-    radio_input: url.searchParams.get("radio-input"),
+    radio_input: url.searchParams.get("radio_input"),
   };
 
   $orderConfirmation.innerHTML = `
@@ -28,6 +28,7 @@ export function OrderConfirmation() {
     <li>Payment method${sumaryObj.radio_input}</li>
   </ul>
   `;
+  localStorage.clear();
 
   return $orderConfirmation;
 }
