@@ -32,7 +32,8 @@ export function FormOrder() {
 
   // Refact
   const form = document.getElementById("form");
-  form.addEventListener("change", () => {
+  form.addEventListener("change", (e) => {
+    e.preventDefault();
     document.getElementById("submitBtn").disabled = !form.checkValidity();
   });
 }

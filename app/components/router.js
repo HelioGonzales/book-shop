@@ -3,6 +3,7 @@ import { fetchCB } from "../helpers/fetch.js";
 import { Bag } from "./bag.js";
 import { BookCard } from "./bookCard.js";
 import { FormOrder } from "./form-order.js";
+import { OrderConfirmation } from "./order-confirmation.js";
 import { Total } from "./total.js";
 
 export function Router() {
@@ -47,5 +48,7 @@ export function Router() {
   } else if (hash === "#/form-order") {
     $form.classList.remove("show-form");
     FormOrder();
+  } else if (hash === "#/order-confirmation") {
+    d.getElementById("main").appendChild(OrderConfirmation());
   }
 }

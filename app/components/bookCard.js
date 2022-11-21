@@ -1,7 +1,8 @@
 import { Cart } from "./cart.js";
+import { Popup } from "./popup.js";
 
 export function BookCard(props) {
-  let { title, author, price } = props;
+  let { title, author, price, description } = props;
   let quantity = 1;
 
   document.addEventListener("click", (e) => {
@@ -37,6 +38,16 @@ export function BookCard(props) {
     }
   });
 
+  document.addEventListener("click", (e) => {
+    if (e.target.dataset.des === author) {
+      // e.preventDefault();
+      console.log(description);
+      document.getElementById("main").appendChild(Popup(description));
+      document.querySelector(".popup").classList.add("active");
+      document.querySelector("#overlay").classList.add("active");
+    }
+  });
+
   return `
   <article class="card">
     <img src="" alt="${title}">
@@ -44,7 +55,7 @@ export function BookCard(props) {
     <p>Author: ${author}</p>
     <span>Price: ${price}</span>
     <div>
-     <a href="#" class="show-more">Show More</a>
+     <a href="/#" data-des="${author}" class="show-more">Show More</a>
      <a href="/#" class="add-to-bag" data-id="${author}">Add to bag</a>
     </div>
   </article>`;

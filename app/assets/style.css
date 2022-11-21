@@ -3,6 +3,7 @@
   --bg-color-secondary: #fff;
   --bg-color-error: #dc3545;
   --form-ok-color: #4caf50;
+  --black: #000;
 }
 
 html {
@@ -81,6 +82,53 @@ img {
   text-decoration: none;
 }
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 80%;
+  border-radius: 10px;
+  border: solid 1px var(--black);
+  z-index: 10;
+  background-color: var(--bg-color-secondary);
+  width: 500px;
+  max-width: 80%;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-header {
+  padding: 10px 15px;
+  text-align: end;
+}
+
+.btn-close-popup {
+  cursor: pointer;
+}
+
+.popup-des {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .bag-container {
   display: flex;
   flex-direction: column;
@@ -126,9 +174,7 @@ img {
 
 .form-order {
   text-align: center;
-
   margin-top: 20px;
-  /* background-color: var(--bg-color-primary); */
 }
 
 .show-form {
@@ -183,7 +229,6 @@ img {
   font-size: 80%;
   background-color: var(--bg-color-error);
   color: var(--bg-color-secondary);
-  /* transition: all 800ms ease; */
 }
 
 .form-error.is-active {
@@ -192,4 +237,20 @@ img {
 
 .show-error-form {
   display: none;
+}
+
+ul {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
