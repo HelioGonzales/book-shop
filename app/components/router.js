@@ -15,7 +15,7 @@ export function Router() {
 
   d.getElementById("main").innerHTML = null;
 
-  if (!hash || hash === "#/") {
+  if (!hash || hash === "#/" || hash === "book-shop/#/") {
     fetchCB({
       url: book_api.BOOK_API,
       cbSuccess: (books) => {
