@@ -1,10 +1,8 @@
 export function fetchCB(props) {
   let { url, cbSuccess } = props;
-  let responseClone;
 
   fetch(url)
     .then((response) => {
-      responseClone = response.clone();
       return response.json();
     })
     .then((data) => {
