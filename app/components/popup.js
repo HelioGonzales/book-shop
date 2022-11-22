@@ -9,8 +9,8 @@ export function Popup(prop) {
     if (e.target.matches(".btn-close-popup")) {
       document.querySelector(".popup").classList.remove("active");
       document.querySelector("#overlay").classList.remove("active");
-      location.reload();
     }
+    location.reload();
   });
 
   $popup.innerHTML = `
