@@ -1,2 +1,2 @@
 # book-shop
-https://heliogonzales.netlify.app/
+https://heliogonzales.github.io/book-shop/
