@@ -51,8 +51,8 @@ export function BookCard(props) {
     <p>Author: ${author}</p>
     <span>Price: ${price}</span>
     <div>
-     <a href="/#" data-des="${author}" class="show-more">Show More</a>
-     <a href="/#" class="add-to-bag" data-id="${author}">Add to bag</a>
+     <a href="#" data-des="${author}" class="show-more">Show More</a>
+     <a href="#" class="add-to-bag" data-id="${author}">Add to bag</a>
     </div>
   </article>`;
 }
